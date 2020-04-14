@@ -1,0 +1,415 @@
+{% extends "layout.html" %}
+{% set active_page = 'home' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block css %}
+  <link href="/static/css/flip-card.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/popup/dist/css/corner-popup.min.css">
+{% endblock %}
+
+{% block body %}
+
+            <!--  background image with overlay  -->
+  <section class="section bg-home height-100">
+      <div class="bg-overlay"></div>
+      <div class="home-center">
+          <div class="home-desc-center">
+              <div class="container home">
+                  <div class="row justify-content-end">
+                      <div class="col-md-6 text-center mt-5 animated">
+                          <h1 class="text-center home-title pad animated h1">Don't know what to do <br> in face of COVID-19?</h1>
+                          <p class="text-center pt-3 home-sub-title mb-3 animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat arcu ut orci porta, eget porttitor felis suscipit. Sed a nisl ullamcorper </p>
+                          <a class="gradient-button gradient-button-1 animated" href="#contact">CONTACT US</a>
+                          <a class="gradient-button gradient-button-4 animated" href="#symptomes">LEARN MORE</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+          <!-- Covid-19 Symptomes as Cards with image in the middle   -->
+  <section class="section bg-gray animated" id="symptomes">
+      <div class="container animated">
+          <div class="row justify-content-center pb-5 text-center animated">
+              <div class="col-md-6">
+                  <h4 class="text-uppercase title animated h4">Corona Virus <span class="gr-t">Symptomes</span></h4>
+                  <p class="sub-title animated">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+              </div>
+          </div>
+          <div class="row justify-content-center animated">
+            <div class="col-md-4">
+                <div class="card-columns">
+                  <div class="card bg-gray card-shadow animated">
+                    <div class="row no-gutters">
+                      <div class="col-md-7">
+                          <div class="card-body">
+                              <h5 class="card-title h5">Coughing</h5>
+                              <p class="card-text">One of the Covid-19 Symptomes.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <img src="../static/assets/coronasigns/cough.png" class="card-img-top h-50 flip" alt="Coughing">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-gray card-shadow animated">
+                    <div class="row no-gutters">
+                      <div class="col-md-7">
+                          <div class="card-body">
+                              <h5 class="card-title h5">Headacke</h5>
+                              <p class="card-text">One of the Covid-19 Symptomes.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <img src="../static/assets/coronasigns/headache.png" class="card-img-top h-50 flip" alt="Headacke">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-gray card-shadow animated" id="card-center">
+                    <div class="row no-gutters">
+                      <div class="col-md-7">
+                          <div class="card-body">
+                              <h5 class="card-title h5">Sore Throat</h5>
+                              <p class="card-text">One of the Covid-19 Symptomes.</p>
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <img src="../static/assets/coronasigns/sore.png" class="card-img-top h-50 flip" alt="Sore Throat">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 animated" id="img">
+                  <img src="../static/assets/doctors.png" alt="Coronavirus Symptomes">
+              </div>
+              <div class="col-md-4">
+                <div class="card-columns">
+                  <div class="card bg-gray card-shadow animated">
+                    <div class="row no-gutters">
+                      <div class="col-md-5">
+                          <img src="../static/assets/coronasigns/shortness.png" class="card-img-top h-50" alt="Shortness Of Breath">
+                      </div>
+                      <div class="col-md-7">
+                          <div class="card-body">
+                              <h5 class="card-title h5">Shortness Of Breath</h5>
+                              <p class="card-text">One of the Covid-19 Symptomes.</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card bg-gray card-shadow animated">
+                    <div class="row no-gutters">
+                      <div class="col-md-5">
+                          <img src="../static/assets/coronasigns/fever.png" class="card-img-top h-50" alt="Fever">
+                      </div>
+                      <div class="col-md-7">
+                          <div class="card-body">
+                              <h5 class="card-title h5">Fever</h5>
+                              <p class="card-text">One of the Covid-19 Symptomes.</p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+              <!-- FAQs about COVID-19   -->
+  <section class="section bg-light animated" id="faqs">
+    <div class="container">
+      <div class="row justify-content-center pb-5 text-center">
+          <div class="col-md-6">
+              <p class="small"><span class="gr-t head-title"><b>Important FAQS</b></span></p>
+              <h4 class="text-uppercase title txt-shadow h4">Fequently Asked Questions</h4>
+              <p class="sub-title">Lorem ipsum dolor sit amet consectetur
+              adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+          </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <img src="../static/assets/masks.png" alt="doctors with masks" style="height: 100%; width: 100%">
+        </div>
+        <div class="col-md-6">
+          <div class="accordion" id="accordionExample">
+            <div class="card mb-2 nav-transparent">
+              <div class="card-header gradient-button-4" id="headingOne">
+                <h5 class="mb-0 h5">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Why Shildorona?
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body nav-transparent sub-title">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card mb-2 nav-transparent">
+              <div class="card-header gradient-button-4" id="headingTwo">
+                <h5 class="mb-0 h5">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What are the common symptomes of covid-19?
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body nav-transparent sub-title">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card mb-2 nav-transparent">
+              <div class="card-header gradient-button-4" id="headingThree">
+                <h5 class="mb-0 h5">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    What are the preventions from covid-19?
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body nav-transparent sub-title">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+            <div class="card nav-transparent">
+              <div class="card-header gradient-button-4" id="headingFour">
+                <h5 class="mb-0 h5">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Are we trustworthy?
+                  </button>
+                </h5>
+              </div>
+
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body nav-transparent sub-title">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- discouver the disease row -->
+  <div class="row justify-content-center img-cover" id="mid-row">
+    <div class="col-md-10 text-center">
+      <p class="h1">Explore more on <span class="gr-t">the new coronaVirus</span></p>
+      <a class="gradient-button gradient-button-4 animated my-2" href="#" style="width: fit-content" data-toggle="modal" data-target="#video">
+          What's CoronaVirus
+      </a>
+                    <!-- Modal -->
+      <div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="videoTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="width: 50vw; height: 80vh">
+            <div class="modal-header">
+              <h5 class="modal-title h5" id="videoTitle">What's COVID-19?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="100%" src="https://www.youtube.com//embed/watch?v=VQU3Jf-h9jQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Covid-19 Symptomes as Cards with image in the middle   -->
+  <section class="section bg-gray animated" id="preventions">
+    <div class="container animated">
+      <div class="row justify-content-center pb-5 text-center animated">
+        <div class="col-md-6">
+            <h4 class="text-uppercase head-title animated h4">How To protect yourself?</h4>
+            <h3 class="text-uppercase title txt-shadow animated">Preventions & Advice</h3>
+            <p class="sub-title animated">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit sed do eiusmod <b>tempor incididunt</b> ut labore et dolore.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit <b>sed do eiusmod tempor</b> incididunt ut labore et dolore.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+            <div class="text-center">
+                <img src="../static/assets/preventions/hands.png" class="img-shadow mb-2 scl-img" alt="hands washing">
+                <p class="services-main-title">Wash Your hands Frequently</p>
+                <p class="services-main-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Lorem. </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="text-center">
+                <img src="../static/assets/preventions/mouth.png" class="img-shadow mb-2 scl-img" alt="touching face parts">
+                <p class="services-main-title">Avoid touching face parts</p>
+                <p class="services-main-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Lorem.  </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="text-center">
+                <img src="../static/assets/preventions/mask.png" class="img-shadow mb-2 scl-img" alt="mask">
+                <p class="services-main-title">Wear Masks</p>
+                <p class="services-main-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Lorem.  </p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="text-center">
+                <img src="../static/assets/preventions/hygiene.png" class="img-shadow mb-2 scl-img" alt="hygiene">
+                <p class="services-main-title">Practice hygiene</p>
+                <p class="services-main-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor Lorem.  </p>
+            </div>
+        </div>
+      </div>
+      <div class="row justify-content-center my-2">
+        <a class="gradient-button gradient-button-4 animated" href="#" style="width: fit-content" data-toggle="modal" data-target="#exampleModalLong">
+          How to wash your hands?<i class="fas fa-arrow-right"></i>
+        </a>
+                <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title h5" id="exampleModalLongTitle">How To Wash Your Hands?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h6 class="h6">Follow these five steps every time.</h6>
+                <ul>
+                <li>Wet your hands with clean, running water (warm or cold), turn off the tap, and apply soap.</li>
+                <li>Lather your hands by rubbing them together with the soap. Lather the backs of your hands, between your fingers, and under your nails.</li>
+                <li>Scrub your hands for at least 20 seconds. Need a timer? Hum the “Happy Birthday” song from beginning to end twice.</li>
+                <li>Rinse your hands well under clean, running water.</li>
+                <li>Dry your hands using a clean towel or air dry them.</li>
+                </ul>
+                <p class="small">Use Hand Sanitizer When You Can’t Use Soap and Water</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="gradient-button nav-transparent animated" href="#faqs" style="width: fit-content">
+          <span class="gr-t">Q & A on COVID-19</span><i class="fas fa-arrow-right" style="color: #3189DC"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--  About and contact Us section   -->
+    <section class="section bg-light img-cover animated" id="s-about">
+      <div class="container animated">
+        <div class="row animated">
+          <!-- contact us column -->
+          <div class="col-md-6 animated" id="contact">
+            <div class="card card-shadow">
+              <div class="card-body">
+                <h2 class="card-title text-uppercase h2"><b>Contact Us</b></h2>
+                <form class="mt-3">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label class="control-label" for="first">First Name</label>
+                      <input id="first" type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="control-label" for="last">Last Name</label>
+                      <input id="last" type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label class="control-label" for="email">Email</label>
+                      <input id="email" type="email" class="form-control" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label class="control-label" for="message">Message</label>
+                      <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-row justify-content-end">
+                    <a href="#" class="gradient-button gradient-button-3">Send Message</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- about us column -->
+          <div class="col-md-6 animated" id="about">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="text-center">
+                    <h2 class="text-uppercase h2">Who we are?<br>(About)</h2>
+                  </div>
+                </div>
+                <div class="flip-card-back container-fluid">
+                  <h2 class="text-uppercase txt-shadow text-center h2">About Us</h2>
+                  <h3 class="text-uppercase head-title text-center h3">We Only Care About Your Health</h3>
+                  <article>
+                    <p> <b>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b> Morbi blandit quam vitae volutpat porta.
+                    Nunc faucibus lacus et enim efficitur aliquam vulputate a arcu.</p>
+                    <p>Etiam in dapibus augue. Nam tempus, nibh at elementum posuere, est arcu suscipit elit, sed luctus urna mauris at ex.
+                    Aliquam nisl massa, vulputate sed mi eu, egestas dapibus justo. Nam imperdiet, nisl id egestas tincidunt, arcu nunc varius metus,
+                    at convallis nulla ipsum non urna.</p>
+                    <p>Nam eu tellus enim. Quisque facilisis dui vitae felis aliquam molestie. Mauris ullamcorper imperdiet ante non feugiat.
+                    Ut vel ex commodo lectus dictum vehicula. Praesent mollis gravida orci. Maecenas bibendum mi iaculis, lobortis purus ullamcorper,
+                    ultrices metus.</p>
+                    <p>Nam bibendum aliquam orci vel tincidunt. Maecenas ornare tristique molestie.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="tips"></div>
+{% endblock %}
+
+{% block js %}
+  <script src="/static/popup/dist/js/corner-popup.min.js"></script>
+  <script src="/static/js/utils.js"></script>
+  <script>
+      const myNav = $('#home-bar');
+      const btn = $('#buttonToggle');
+
+      function hide(exp, elm) {
+        if (exp) {
+            elm.addClass("bg-grad");
+            elm.removeClass("nav-transparent");
+        }
+        else {
+            elm.addClass("nav-transparent");
+            elm.removeClass("bg-grad");
+        }
+      }
+
+      btn.on('click', () => {
+        let isExpanded = btn.attr('aria-expanded') == 'false';
+        hide(isExpanded, myNav);
+        });
+      window.addEventListener('scroll', () => {
+          "use strict";
+          hide(window.scrollY >= 200, myNav)
+      });
+  </script>
+  {% if session.user_id %}
+    <script src="/static/js/tips.js"></script>
+  {% endif %}
+{% endblock %}

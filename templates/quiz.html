@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="static/quiz//dist/jquery.quiz-min.css">
+{% endblock %}
+
+{% block main %}
+<!--
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card" id="quiz">
+                <div class="card-header" id="quiz-header">
+                    <h4 class="text-center h4">Quiz 1</h4>
+                </div>
+                <div class="card-body" id="quiz-body">
+                    <div class="card-text qt" id="quiz-q"><b>Q: </b>How can I implement this feature?</div>
+                    <div class="small s-i">Choose one answer</div>
+                    <ul class="list-group list-group-flush" id="quiz-a">
+                        <hr>
+                        <li class="list-group-item" id="quiz-1">
+                            <span class="c-center">A</span><i class="far fa-circle fa-2x"></i><span class="text-center sq">I don't know</span>
+                        </li>
+                        <li class="list-group-item" id="quiz-2">
+                            <span class="c-center">B</span><i class="far fa-circle fa-2x"></i><span class="text-center sq">jquery</span>
+                        </li>
+                        <li class="list-group-item" id="quiz-3">
+                            <span class="c-center">C</span><i class="far fa-circle fa-2x"></i><span class="text-center sq">Python</span>
+                        </li>
+                        <li class="list-group-item" id="quiz-4">
+                            <span class="c-center">D</span><i class="far fa-circle fa-2x"></i><span class="text-center sq">None</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer text-uppercase">
+                    <span class="float-left mt-o5">Good Luck!</span>
+                    <button class="btn btn-success float-right">Check</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div id="quiz">
+        <div id="quiz-header">
+          <h1>CoronaVirus Quiz</h1>
+          <p><a id="quiz-home-btn">Home</a></p>
+        </div>
+        <div id="quiz-start-screen">
+            <p>
+              <a href="#" id="quiz-start-btn" class="quiz-button">Start Quiz</a>
+            </p>
+        </div>
+    </div>
+    {% if session.user_id %}
+        <div id="next" data-toggle="tooltip" data-placement="bottom" title="Go to profile page">
+          <a href="/profile"><i class="fas fa-angle-double-right fa-3x"></i></a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block js %}
+    <script src="/static/quiz//dist/jquery.quiz-min.js"></script>
+    <script src="/static/js/quiz.js"></script>
+{% endblock %}

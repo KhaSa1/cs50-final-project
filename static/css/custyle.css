@@ -1,0 +1,377 @@
+html, body {
+  background: #fafafa;
+  color: #333333;
+  font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”,
+    “Ubuntu”, “Cantarell”, “Fira Sans”,
+    “Droid Sans”, “Helvetica Neue”, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-secondary {
+  background-color: #c58e25 !important;
+}
+.mt-r {
+  margin-top: 8rem !important;
+  margin-bottom: 8rem !important;
+}
+
+.mt-o5 {
+  margin-top: 0.5rem;
+}
+
+.mr-o5 {
+  margin-right: 0.5rem;
+}
+
+.ml-o5 {
+  margin-left: 0.5rem;
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+.m-o5 {
+  margin: 0.5rem;
+}
+
+.bg-grad {
+  /*background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);*/
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.navbar-brand{
+  color: #ffc8c8 !important;
+  font-weight: 500;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: white;
+  transition: all .3s ease;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #290e05;
+  font-weight: 500;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.site-header .container a>img {
+  height: 50px!important;
+  width: 50px!important;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.searchbox-icon {
+  background: url('../assets/icnsearch.svg') no-repeat;
+  right: 34px;
+  top: 0px;
+  display: inline-block;
+  height: 18px;
+  position: relative;
+  width: 18px;
+  color: #767676;
+  cursor: pointer;
+  border: none;
+  transition: all .3s ease;
+}
+
+.btn-primary {
+    background-color: #844513;
+    border-color: #564532;
+}
+
+.btn-primary:hover, .btn-primary:active {
+  background-color: #514436;
+  border-color: #463c32;
+}
+
+.animated {
+   -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+   -o-transition: all 0.5s;
+   transition: all 0.5s;
+}
+
+.txt-shadow {
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.table .thead-dark th {
+    background-color: #c67801;
+    border-color: #171819;
+}
+
+.content-inside {
+  padding: 20px;
+  padding-bottom: 50px;
+}
+
+.gr-t {
+  background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 1;
+}
+
+.card-columns .card {
+    border: 2px solid rgb(15, 59, 164, 0.5);
+}
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.no-gutters img {
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
+.no-gutters .col-md-5 {
+  height: 50%;
+}
+
+#card-center {
+  position: relative;
+  left: 100%;
+  z-index: 1;
+  margin: 1rem 0rem 1rem 2rem;
+}
+
+.nav-btn {
+    margin: 4px;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 150% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 100px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.nav-btn:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 4px 5px 6px;
+    text-decoration: none;
+}
+
+.sub-title {
+  color: gray;
+}
+
+.shadow-white {
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3) !important;
+}
+
+.title {
+  font-weight: 700;
+  font-size: xx-large;
+}
+
+.head-title {
+  color: #82B3E6;
+  font-size: medium;
+}
+
+#hl {
+  width: 1px;
+  background: white;
+  margin: 5px;
+}
+
+#accordionExample .card {
+  border: none;
+}
+
+div.gradient-button-4, .img-shadow{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  border-radius: 50px !important;
+}
+.img-shadow {
+  border-radius: 50% !important;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-columns .card:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 20px 2px #00000036, -5px 5px 20px 2px #00000036;
+  z-index: 10;
+}
+
+.scl-img {
+  transform: scale(.6);
+}
+
+div.gradient-button-4 button {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+p.h1 {
+  font-weight: bolder;
+  font-size: -webkit-xxx-large;
+  color: whitesmoke;
+}
+
+#home-bar .nav-item {
+  color: white !important;
+}
+
+#home-bar .navbar-brand {
+  color: #ffc8c8 !important;;
+}
+
+#contact {
+  margin: auto 0 auto 0;
+}
+
+#p-username {
+  width: 25%;
+  display: none;
+}
+
+#s-about {
+  background-image: url('../assets/corona-bg.jpg');
+
+}
+
+.img-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+#mid-row {
+  height: 60vh;
+  background-image: url('../assets/1.png') !important;
+  align-items: center;
+}
+
+#wrapper {
+  display: none;
+}
+
+#next {
+  display: inline-block;
+  position: absolute;
+  top: 52%;
+  right: 2rem;
+  margin: 1rem;
+  color: #3b4e66;
+}
+
+#prev {
+  display: inline-block;
+  position: absolute;
+  top: 52%;
+  left: 2rem;
+  margin: 1rem;
+  color: #3b4e66;
+}
+
+.preloader {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.list-group-flush .list-group-item {
+  border-bottom: solid #a9a9a947;
+  cursor: pointer;
+}
+
+.c-center {
+  position: relative;
+  left: 22px;
+  bottom: 7px;
+}
+
+.list-group-item .fa-2x {
+  color: #152e4d;
+}
+
+.q-l {
+  padding: 0;
+}
+
+.i-c {
+  color: rgb(221, 94, 137) !important;
+  background-color: #fdaa82;
+  border-radius: 50%;
+}
+
+.sq {
+  font-size: medium;
+  vertical-align: super;
+  letter-spacing: 1.2px;
+  padding: 1rem;
+}
+
+.qt {
+  padding: 5px 5px 1rem 5px;
+}
+
+.s-i {
+  position: relative;
+  top: 1rem;
+}
+
+.preloader img {
+  width: inherit;
+  height: inherit;
+  animation-name: rotateThis;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: rotateThis;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes rotateThis {
+    0% { -webkit-transform:scale(1) rotate(0deg);
+          transform: scale(1) rotate(0deg)}
+    10% { -webkit-transform:scale(1.1) rotate(0deg);
+          transform: scale(1.1) rotate(0deg)}
+    100% {-webkit-transform:scale(1.1) rotate(360deg);
+          transform: scale(1.1) rotate(360deg)}
+}

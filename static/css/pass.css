@@ -1,0 +1,22 @@
+/* copied from https://www.formget.com/password-strength-checker-in-jquery/ */
+
+span.short{
+font-weight:bold;
+color:#FF0000;
+font-size:larger;
+}
+span.weak{
+font-weight:bold;
+color:orange;
+font-size:larger;
+}
+span.good{
+font-weight:bold;
+color:#2D98F3;
+font-size:larger;
+}
+span.strong{
+font-weight:bold;
+color: limegreen;
+font-size:larger;
+}

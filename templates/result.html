@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="/static/popup/dist/css/corner-popup.min.css">
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="p-1 mb-2">Results:</h2>
+        {% for k,v in res.items() %}
+            <p>{{ k }}: {{ v }}</p>
+        {% endfor %}
+        <hr>
+        {% for k, v in total.items() %}
+            <p>{{ k }}: {{ v }}</p>
+        {% endfor %}
+      </div>
+      <div class="col-md-8">
+          {% if res != None %}
+              <iframe src="https://www.bing.com/covid/local/{{country}}" style="height: 100%; width: 100%; border: none"></iframe>
+          {% else %}
+              <iframe src="https://www.bing.com/covid/" style="height: 100%; width: 100%; border: none"></iframe>
+          {% endif %}
+      </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/popup/dist/js/corner-popup.min.js"></script>
+    <script src="/static/js/utils.js"></script>
+    <script src="/static/js/tips.js"></script>
+{% endblock %}

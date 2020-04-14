@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="description" content="Coronavirus awareness Website">
+        <meta name="keywords" content="Coronavirus, COVID-19, Virus">
+        <meta name="author" content="Khalil Saghiri">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/assets/corona.png" rel="icon">
+
+        <link href="/static/scss/styles.css" rel="stylesheet">
+        <link href="/static/css/style03.css" rel="stylesheet">
+        <link href="/static/css/style3.css" rel="stylesheet">
+        <link href="/static/css/buttons.css" rel="stylesheet">
+        <link href="/static/css/custyle.css" rel="stylesheet">
+        {% block css %}{% endblock %}
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>Shieldorona: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+        <div class="preloader">
+          <img src="../static/assets/corona.png" class="rounded animated" alt="logo">
+        </div>
+        <div id="wrapper">
+          <header class="site-header">
+            {% if active_page == 'home' %}
+                <!-- transparent bar -->
+              <nav class="navbar navbar-expand-md navbar-dark nav-transparent fixed-top shadow-white" id="home-bar">
+            {% else %}
+                <!-- gradient color bar -->
+              <nav class="navbar navbar-expand-md navbar-dark bg-grad fixed-top shadow-sm">
+            {% endif %}
+                <div class="container animated">
+                  <a href="/quiz" data-toggle="tooltip" data-placement="right" title="Go to quiz page">
+                    <img src="../static/assets/corona.png" class="rounded float-left animated" alt="logo">
+                  </a>
+                  <a class="navbar-brand mr-4 animated" href="/">Sheildorona</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" id="buttonToggle" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse animated" id="navbarToggle">
+                    <div class="navbar-nav mr-auto">
+                      <a class="nav-item nav-link" href="/#">Home</a>
+                      <a class="nav-item nav-link" href="/#about">About</a>
+                      <a class="nav-item nav-link" href="/#faqs">Faqs</a>
+                      <a class="nav-item nav-link" href="/#preventions">Preventions</a>
+                    </div>
+                    <!-- Navbar Right Side -->
+                    {% if session.user_id %}
+                      <div class="navbar-nav mr-auto">
+                        <form class="form-inline" action="{{ url_for('search') }}" method="post">
+                          <input autocomplate="off" class="form-control mr-sm-2" type="text" placeholder="Search"
+                            aria-label="Search" name="country">
+                          <button class="searchbox-icon" type="submit"></button>
+                        </form>
+                      </div>
+                      <div class="navbar-nav ml-auto">
+                          <a class="nav-item nav-link p-2 animated" href="/profile">Profile<i class="far fa-user-circle"></i></a>
+                          <span id="hl"></span>
+                          <a class="nav-item nav-link nav-btn gradient-button-1 animated" href="/logout">Log Out<i class="fas fa-sign-out-alt"></i></a>
+                      </div>
+                    {% else %}
+                    <div class="navbar-nav animated">
+                      <a class="nav-item nav-link nav-btn gradient-button-3 animated" href="/login">Login</a>
+                      <a class="nav-item nav-link nav-btn gradient-button-1 animated" href="/register">Register</a>
+                    </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </nav>
+        </header>
+        {% if get_flashed_messages() %}
+            <div class="alert alert-info text-center mt-5" role="alert">
+                {{ get_flashed_messages() | join(" ") }}
+            </div>
+        {% endif %}
+        {% block body %}
+        <main class="container mt-r p5">
+            {% block main %}
+            {% endblock %}
+        </main>
+        {% endblock %}
+        <footer class="footer animated" style="padding-top: 20px; padding-bottom: 20px;">
+          <div class="footer-alt text-center animated">
+              <p class="mb-0">2020 © KhalilSa. All Rights Reserved</p>
+          </div>
+          <div class="small text-center text-muted animated">
+              Data provided for free by <a href="https://rapidapi.com/KishCom/api/covid-19-coronavirus-statistics">rapidapi</a>.
+          </div>
+        </footer>
+      </div>
+        {% block js %}
+        {% endblock %}
+      <script>
+        $(window).on('load', () => {
+             setTimeout( () => {
+               $(".preloader").fadeOut("fast");
+               $("#wrapper").fadeIn("fast");
+           }, 500);
+        });
+      </script>
+      <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
+    </body>
+
+</html>
