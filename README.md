@@ -23,11 +23,13 @@ export FLASK_DEBUG=1 <br/>
 ## for Windows
 cd [path to app.py] <br/>
 set API_KEY=[your api key] <br/>
-set FLASK_APP=app.py <br/>
+set FLASK_APP=app <br/>
 flask run
 ### optional
 set FLASK_ENV=development <br/>
 set FLASK_DEBUG=1
+<br/>
+for more info visit: https://flask.palletsprojects.com/en/1.0.x/cli/
 
 
 
